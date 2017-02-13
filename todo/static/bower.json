@@ -1,0 +1,22 @@
+{
+  "name": "static",
+  "homepage": "https://github.com/NomNomLemon/test_origin",
+  "authors": [
+    "avalar22@gmail.com"
+  ],
+  "description": "avalar22",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.1",
+    "alertify-js": "^1.7.1",
+    "angular-bootstrap": "^1.3.3"
+  }
+}

@@ -1,0 +1,43 @@
+{% load djng_tags %}
+{% angularjs 1 %}
+<script type="text/ng-template" id="edit-task-modal.html">
+    <div class="modal-header dialog-custom-header">
+        <div class="dialog-close-button">
+            <button class="close" ng-click="close()"><span class="glyphicon glyphicon-remove"></span></button>
+        </div>
+        <h4 class="modal-title" id="prices-upload-modal-label" ng-if="parentTask">Edit Task: "{{ parentTask.name }}"</h4>
+        <h4 class="modal-title" id="prices-upload-modal-label" ng-if="!parentTask">Create New Task</h4>
+    </div>
+    <div class="modal-body">
+        <div class="container-fluid">
+            <form class="form-horizontal" id="new-market-form">
+                <div class="form-group">
+                    <label for="task-name" class="col-xs-3 control-label">Name: </label>
+
+                    <div class="col-xs-9">
+                        <input type="text" ng-model="task.name" id="task-name" name="task-name"
+                               class="form-control"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="task-description" class="col-xs-3 control-label">Description: </label>
+
+                    <div class="col-xs-9">
+                        <textarea id="task-description" name="task-description" ng-model="task.description" class="form-control"></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="task-status" class="col-xs-3 control-label">Status </label>
+
+                    <div class="col-xs-9">
+                        <input id="task-status" name="task-status" type="checkbox" ng-model="task.status">
+                    </div>
+                </div>
+                <button type="button" class="btn btn-success pull-right" ng-if="parentTask" ng-click="saveTask(task.id)">Save</button>
+                <button type="button" class="btn btn-success pull-right" ng-if="!parentTask" ng-click="saveTask()">Create</button>
+            </form>
+        </div>
+
+    </div>
+</script>
+{% endangularjs %}

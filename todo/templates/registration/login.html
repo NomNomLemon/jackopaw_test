@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <form class="form-signin" method="POST">
+        {% csrf_token %}
+        <h2 class="form-signin-heading">Please sign in</h2>
+        {{ form.non_field_errors }}
+        <label for="inputEmail" class="sr-only">{{ form.username.label }}</label>
+        {{ form.username }}
+        {{ form.username.errors }}
+        <label for="inputPassword" class="sr-only">{{ form.password.label }}</label>
+        {{ form.password }}
+        {{ form.password.errors }}
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="remember-me"> Remember me
+          </label>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+    </form>
+
+</div>
+{% endblock %}
