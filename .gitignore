@@ -1,0 +1,32 @@
+# bkup files you forgot to erase that start with 'bkup-'
+bkup-*
+bkup/*
+
+# OS-specific - .DS_Store is an OSX file system thing
+.DS_Store
+
+# Python
+*.pyc
+
+# some pycharm thing
+.idea*
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+.env/
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Logs
+logs
+*.log
+
+#test db
+*.sqlite3
+
+bower_components/*
